@@ -36,8 +36,8 @@
     padding: 0;
     border: 0;
     outline: 0;
-    font-style: normal; /* normal, italic, oblique, ... */
-    font-weight: normal; /* normal, bold, bolder, lighter, ... */
+    /*font-style: normal; /* normal, italic, oblique, ... */
+    /*font-weight: normal; /* normal, bold, bolder, lighter, ... */
     font-variant: normal; /* normal, small-caps, ... */
     font-family: 'Lato', Helvetica, sans-serif; }
 
@@ -53,24 +53,89 @@ body {
     line-height: 1.5em;
     color: #222; }
 
-h3 {
+code {
+    font-family: "Courier New", Courier, monospace;
+    background: #f8f8f8;
+    border: #eaeaea solid 1px;
+    border-radius: 4px;
+    padding-top: 0.0em;
+    padding-bottom: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em; }
+
+h1 {
     font-weight: normal;
-    font-size: 1.5em;
-    padding-bottom: 0.5em;
-    color: #444; }
+    font-size: 2.75em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    color: #000; }
 
 h2 {
     font-weight: normal;
-    font-size: 2em;
-    padding-bottom: 0.5em;
+    font-size: 1.75em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    color: #000; }
+
+h3 {
+    font-weight: normal;
+    font-size: 1.25em;
+    padding-top: 0.0em;
+    padding-bottom: 0.0em;
+    color: #222; }
+
+h4 {
+    font-weight: normal;
+    font-size: 1.125em;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
     color: #444; }
+
+h5 {
+    font-weight: normal;
+    font-size: 1.125em;
+    padding-top: 0.25em;
+    padding-bottom: 0em;
+    color: #555; }
+
+h6 {
+    font-weight: normal;
+    font-size: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0em;
+    color: #666; }
 
 p {
     font-size: 1.125em;
     color: #444; }
 
+b {
+    color: #555; }
+
+a {
+    color: #008bd0;
+    text-decoration: none; }
+
+a:hover {
+    color: #009fee; }
+
 ul {
+    margin-left: 2em; }
+
+ul ul {
     margin-left: 1em; }
+
+/*ul li {
+    font-size: 1.125em; }*/
+
+ul li:first-child h3 {
+    padding-top: 0.0em; }
+
+ul li h3 {
+    padding-top: 1.0em; }
+
+ul li p {
+    font-size: 1.125em; }
 
 nav {
     color: #fff;
@@ -85,6 +150,7 @@ nav ul {
     overflow: hidden; }
 
 nav ul li {
+    padding: 0.0em;
     float: left; }
 
 nav ul li a {
@@ -98,12 +164,22 @@ nav ul li a:hover:not(.active) {
 section {
     width: 900px;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    padding-top: 0em;
+    padding-bottom: 0em; }
+
+article {
+    padding-top: 2em;
+    padding-bottom: 0em; }
 
 header {
     line-height: 3em;
     font-size: 1em;
     background-color: #313131; }
+
+header section {
+    padding-top: 0em;
+    padding-bottom: 0em; }
 
 header ul li:last-child {
     float: right; }
@@ -112,6 +188,10 @@ footer {
     line-height: 3em;
     font-size: 1em;
     background-color: #313131; }
+
+footer section {
+    padding-top: 0em;
+    padding-bottom: 0em; }
 
 footer ul li {
     float: none;
@@ -149,7 +229,7 @@ button div {
     display: inline-block;
     vertical-align: middle;
     font-size: 1em;
-    font-weight: bold; }
+    font-weight: normal; }
 
 button span {
     display: block;
@@ -283,30 +363,47 @@ button .icon.lin {
 
 .features-section {
     background-color: #f2f2f2;
-    padding-top: 1em;
-    padding-bottom: 1.5em; }
+    padding-top: 0em;
+    padding-bottom: 2em; }
 .features-section article {
     width: 21em;
-    margin: 1.5em 1.5em;
+    margin: 0.5em 2.5em;
     display: inline-block; }
 .features-section h3 {
+    padding-top: 0em;
+    padding-bottom: 0.5em;
     font-weight: bold; }
 
-/* Version History Page */
+/* Version History Page and User Manual Page */
 
-.changelog h2 {
-    padding-top: 1em;
-    padding-bottom: 1em; }
-
-.changelog section {
+.basic section {
     min-height: 100vh;
     height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-align: left; }
 
-.changelog article {
-    padding-top: 1em;
-    padding-bottom: 1em; }
+/***************************/
+/* Table of Contents (ToC) */
+/***************************/
 
-/* User Manual Page */
+#toc_container {
+    /*background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;*/
+    display: table;
+    /*font-size: 95%;*/
+    /*
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+    */
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
