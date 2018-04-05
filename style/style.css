@@ -63,6 +63,18 @@ code {
     padding-left: 0.3em;
     padding-right: 0.3em; }
 
+math, math[mode="inline"] {
+  display: inline;
+  font-family: 'Lato';
+  font-style: normal;
+}
+
+math mi {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: italic;
+}
+
 h1 {
     font-weight: normal;
     font-size: 2.75em;
@@ -78,24 +90,24 @@ h2 {
     color: #000; }
 
 h3 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.25em;
-    padding-top: 0.0em;
-    padding-bottom: 0.0em;
+    padding-top: 1.5em;
+    padding-bottom: 1.0em;
     color: #222; }
 
 h4 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.125em;
     padding-top: 1em;
     padding-bottom: 0.25em;
     color: #444; }
 
 h5 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.125em;
-    padding-top: 0.25em;
-    padding-bottom: 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
     color: #555; }
 
 h6 {
@@ -119,11 +131,16 @@ a {
 a:hover {
     color: #009fee; }
 
+ol {
+    padding-left: 2em; }
+
 ul {
-    margin-left: 2em; }
+    padding-left: 2em;
+    padding-bottom: 1ex;
+  }
 
 ul ul {
-    margin-left: 1em; }
+    padding-left: 2em; }
 
 /*ul li {
     font-size: 1.125em; }*/
@@ -202,6 +219,32 @@ footer ul li + li {
 
 header ul li + li {
     padding-left: 1.5em; }
+
+/***********/
+/* Images  */
+/***********/
+
+img {
+    /*width: 100%;*/
+    width: inherit;
+    margin: 0px;
+    padding: 0px;
+    /*box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    border-radius: 5px; }
+
+figure {
+      /*
+      display: block;
+      float: left;
+      text-align: center;
+      */
+      width: 900px;
+      height: auto;
+      margin-top: 1ex;
+      margin-bottom: 0ex; }
 
 /***********/
 /* Buttons */
@@ -288,6 +331,43 @@ button .icon.lin {
 /*******************/
 /* Custom elements */
 /*******************/
+
+.boxitemize {
+    background: #f8f8f8;
+    border: #eaeaea solid 1px;
+    border-radius: 4px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em; }
+
+.noframe {
+    border-radius: 0px;
+    border-width: 0px; }
+
+.latex {
+    border-radius: 0px;
+    border-style: none; }
+img.latex {
+    vertical-align: middle; }
+
+section.toc h2 {
+    font-weight: normal;
+    font-size: 1.75em;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em; }
+
+section.toc h4 {
+    font-weight: normal;
+    font-size: 1.125em;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0em; }
+
+section.toc h6 {
+    font-weight: normal;
+    font-size: 1em;
+    padding-left: 6em;
+    padding-top: 0.5em;
+    padding-bottom: 0em; }
 
 /* Unused */
 
